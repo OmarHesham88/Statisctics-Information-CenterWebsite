@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>المركز الوطنى للاحصاء والمعلومات</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#FFB636">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#FFB636">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="images/NationalCenterStatistics.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- select2 -->
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- English vaersion -->
+
+</head>
+
+<body>
+
+
+    <div class="spinner-border text-primary loader" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <div class="d-flex flex-nowrap home loader-hidden">
+
+        <!-- menu -->
+        <aside id="sidebar" class="expand">
+            <!-- logo -->
+            <div class="px-2 mt-3 d-flex justify-content-between align-items-center">
+                <div class="sidebar-logo" id="logo">
+                    <img src="./images/NationalCenterStatisticsLogoList.png" class="img-fluid" alt="">
+                </div>
+                <button class="toggle-btn  d-flex p-1" type="button">
+                    <i class="fa-solid fa-bars align-self-center"></i>
+                </button>
+            </div>
+
+
+
+            <!-- menu list -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-item mb-3" id="searchList">
+                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                        <div class="sidebar-link d-flex justify-content-between" id="navSearch">
+                            <input class="form-control" type="text" placeholder="البحث">
+                            <i class="fa fa-search  icon" id="search-icon" aria-hidden="true"></i>
+
+                        </div>
+                        <button class="filter text-center">
+                            <i class="fa-solid fa-sliders fa-rotate-90 icon" id="filter-icon"></i>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="sidebar-item active">
+                    <a href="./home.html" class="sidebar-link ">
+                        <i class="fa-solid fa-house icon"></i>
+
+                        <span class="">الرئيسية</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-users icon"></i>
+                        <span>العملاء </span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./companies.html" class="sidebar-link">
+                        <i class="fa-solid fa-building icon"></i>
+                        <span>العقارات</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./researcher.html" class="sidebar-link">
+
+                        <i class="fa-solid fa-calendar-days icon"></i>
+                        <span>المهام اليومية</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-gavel icon"></i>
+                        <span>قوانين</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-file-signature icon"></i>
+                        <span>نماذج الاتفاقيات</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-building-user icon"></i>
+                        <span> زيارات</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-screwdriver-wrench icon"></i>
+                        <span>صيانة وادارة</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-money-bill-transfer icon"></i>
+                        <span>استثمار</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-globe icon"></i>
+                        <span>الموقع</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+
+                    <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                    <span>سندات</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+
+                <i class="fa-solid fa-chart-simple icon"></i>
+                <span>تقارير</span>
+            </a>
+            </li>
+            <li class="sidebar-item">
+                <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#setting"
+                    aria-expanded="false" aria-controls="setting">
+                    <a class="sidebar-link " id="setting-icon">
+                        <i class="fa-solid fa-gear icon"></i>
+                        <span class="">الإعدادات</span>
+                    </a>
+                    <span class="drop-dowm-icon fa-solid fa-caret-down collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#setting" aria-expanded="false" aria-controls="setting">
+                    </span>
+                </div>
+                <ul id="setting" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="./settings-requesting.html" class="sidebar-link inactive">
+                            <i class="fa-solid fa-file-lines icon inactive"></i>
+                            <span>الطلبات</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="./settings-messages.html" class="sidebar-link inactive">
+                            <i class="fa-solid fa-envelope icon inactive"></i>
+                            <span>الرسائل</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="./settings-auth.html" class="sidebar-link inactive">
+
+                            <i class="fa-solid fa-address-card icon inactive"></i>
+                            <span>الصلاحيات</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="./settings-home.html" class="sidebar-link inactive">
+
+                            <i class="fa-solid fa-file-pen icon inactive"></i>
+                            <span>الصفحة الرئيسية</span>
+
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            </ul>
+        </aside>
+        <!-- end-menu -->
+
+        <!-- main content -->
+        <div class="main-content p-4 main card " style="flex: 1;">
+
+            <!-- header -->
+            <div class="header d-flex flex-wrap justify-content-between align-items-center">
+                <h4 class="title">
+                    الإدارة والاستثمار
+                </h4>
+                <div class="user d-flex justify-content-between align-items-center">
+                    <div class="dropdown">
+                           <button type="button" class="btn lang" id="dropdownlang" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                           <span class="current-lang">عربى</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+               
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownlang">
+                            <li><a class="dropdown-item second-lang" href="#">En</a></li>
+                        </ul>  
+                    </div>
+                    <a href="./notification.html" class="notification  active">
+                        <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <div class="user-img">
+                        <img src="./images/avatar.PNG" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- end-header -->
+
+   <!-- المحتوي -->
+   <div class="management content ">
+    <div class="header d-flex">
+        <div class="page-path">
+            <a href="management-page">الإدارة و الاستثمار</a>
+            <span> &gt</span>
+            <a href="management-page">مبنى 256855</a>
+            <span> &gt</span>
+            <a href="management-page">رقم الطابق</a>
+            <span> &gt</span>
+            <a href="apartment.html">رقم الشقة</a>
+            <span> &gt</span>
+            <a href="rentaldate.html">تاريخ التأجير</a>
+        </div>
+        <div class="d-flex gap-2 flex-wrap justify-content-center" style="min-width: 100px;">
+            <a>
+                <img src="images/excel.svg.png" width="28px">
+            </a>
+            <a href="">
+                <img src="images/pdf.png" width="25px">
+            </a>
+            <!-- <img src="images/excel.svg.png"> -->
+        </div>
+    </div>
+    </div>
+
+
+       
+      <div class="content companies rental-date-header mt-3" style="border-radius: 15px;">
+        <div class="header d-flex mb-0 justify-content-evenly">
+            <div class="date-container">
+                <div class="date-box">
+                  <i class="fas fa-calendar-alt"></i>
+                  <span>من تاريخ</span>
+                  <input type="date" value="2024-10-05" class="date-input">
+                </div>
+                <div class="date-box">
+                  <i class="fas fa-calendar-alt"></i>
+                  <span>إلى تاريخ</span>
+                  <input type="date" value="2024-10-05" class="date-input">
+                </div>
+            </div>
+              
+
+            <div class="search search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+              
+            <!-- <div class="btns d-flex">
+                <div class="search">
+                    <input class="form-control" type="text" name="search" placeholder="البحث">
+                    <i class="fa fa-search  icon" id="search-icon" aria-hidden="true"></i>
+                </div>
+            </div> -->
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <!-- بيانات المستأجرين -->
+    <div class="content rental-date tenant-info-box">
+        <h4 class="d-flex justify-content-center">المستأجر الأول</h4>
+        <h3>بيانات المستأجر</h3>
+        <div class="tenant-info-container">
+            <p><strong>الاسم:</strong> محمد </p>
+            <p><strong>البريد الالكتروني:</strong> mohamed@example.com</p>
+            <p><strong>رقم الجوال:</strong> 01234567890</p>
+            <p><strong>المحافظة:</strong> القاهرة</p>
+            <p><strong>المنطقة:</strong> مدينة نصر</p>
+            <p><strong>الولاية:</strong> ولاية الخرطوم</p>
+            <p><strong>الواتساب:</strong> 01234567890</p>
+            <p><strong>الجنسية:</strong> مصري</p>
+            <p><strong>الوظيفة:</strong> مهندس</p>
+            <p><strong>الرقم القومي:</strong> 12345678901234</p>
+            <p><strong>مكان العمل:</strong> شركة ABC</p>
+        </div>
+      <!-- الملفات -->
+       
+      <div class="companies rental-date-files mt-3" style="border-radius: 15px;">
+        <div class="header d-flex mb-0">
+            <div class="title">
+                الملفات
+            </div>
+            <div class="btns d-flex">
+                <div class="search">
+                    <input class="form-control" type="text" name="search" placeholder="البحث">
+                    <i class="fa fa-search  icon" id="search-icon" aria-hidden="true"></i>
+                </div>
+                <div class="d-flex flex-grow-1 gap-1 btns-group">
+                   
+                    <button type="button" class="btn btn-add" onclick="" id="openModal">
+                        <i class="fas fa-file-upload" style="margin-inline-end:5px;"></i>
+                        إضافة ملف
+                    </button>
+                
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="table-responsive company-table">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="t-header">
+                            <th>#</th>
+                            <th style="min-width: 150px;" scope="col">اسم الملف</th>
+                            <th class="text-center" scope="col">نوع الملف</th>
+                            <th class="text-center" scope="col">عرض و تحميل</th>
+
+                            <th style="min-width: 150px;" class="text-center" scope="col">الخيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>
+                                <label for="Name1">عقد الإيجار</label>
+                            </td>
+                            <td class="text-center">ملف عقد الإيجار</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>                              
+                                <label for="Name1">صورة البطاقة</label>
+                            </td>
+                            <td class="text-center">بطاقة</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>                            
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="content rental-date tenant-info-box">
+        <h4 class="d-flex justify-content-center">المستأجر الثانى</h4>
+        <h3>بيانات المستأجر</h3>
+        <div class="tenant-info-container">
+            <p><strong>الاسم:</strong> محمد </p>
+            <p><strong>البريد الالكتروني:</strong> mohamed@example.com</p>
+            <p><strong>رقم الجوال:</strong> 01234567890</p>
+            <p><strong>المحافظة:</strong> القاهرة</p>
+            <p><strong>المنطقة:</strong> مدينة نصر</p>
+            <p><strong>الولاية:</strong> ولاية الخرطوم</p>
+            <p><strong>الواتساب:</strong> 01234567890</p>
+            <p><strong>الجنسية:</strong> مصري</p>
+            <p><strong>الوظيفة:</strong> مهندس</p>
+            <p><strong>الرقم القومي:</strong> 12345678901234</p>
+            <p><strong>مكان العمل:</strong> شركة ABC</p>
+        </div>
+      <!-- الملفات -->
+       
+      <div class="companies rental-date-files mt-3" style="border-radius: 15px;">
+        <div class="header d-flex mb-0">
+            <div class="title">
+                الملفات
+            </div>
+            <div class="btns d-flex">
+                <div class="search">
+                    <input class="form-control" type="text" name="search" placeholder="البحث">
+                    <i class="fa fa-search  icon" id="search-icon" aria-hidden="true"></i>
+                </div>
+                <div class="d-flex flex-grow-1 gap-1 btns-group">
+                   
+                    <button type="button" class="btn btn-add" onclick="" id="openModal">
+                        <i class="fas fa-file-upload" style="margin-inline-end:5px;"></i>
+                        إضافة ملف
+                    </button>
+                
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="table-responsive company-table">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="t-header">
+                            <th>#</th>
+                            <th style="min-width: 150px;" scope="col">اسم الملف</th>
+                            <th class="text-center" scope="col">نوع الملف</th>
+                            <th class="text-center" scope="col">عرض و تحميل</th>
+
+                            <th style="min-width: 150px;" class="text-center" scope="col">الخيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>
+                                <label for="Name1">عقد الإيجار</label>
+                            </td>
+                            <td class="text-center">ملف عقد الإيجار</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>                              
+                                <label for="Name1">صورة البطاقة</label>
+                            </td>
+                            <td class="text-center">بطاقة</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>                            
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="content rental-date tenant-info-box">
+        <h4 class="d-flex justify-content-center">المستأجر الثانى</h4>
+        <h3>بيانات المستأجر</h3>
+        <div class="tenant-info-container">
+            <p><strong>الاسم:</strong> محمد </p>
+            <p><strong>البريد الالكتروني:</strong> mohamed@example.com</p>
+            <p><strong>رقم الجوال:</strong> 01234567890</p>
+            <p><strong>المحافظة:</strong> القاهرة</p>
+            <p><strong>المنطقة:</strong> مدينة نصر</p>
+            <p><strong>الولاية:</strong> ولاية الخرطوم</p>
+            <p><strong>الواتساب:</strong> 01234567890</p>
+            <p><strong>الجنسية:</strong> مصري</p>
+            <p><strong>الوظيفة:</strong> مهندس</p>
+            <p><strong>الرقم القومي:</strong> 12345678901234</p>
+            <p><strong>مكان العمل:</strong> شركة ABC</p>
+        </div>
+      <!-- الملفات -->
+       
+      <div class="companies rental-date-files mt-3" style="border-radius: 15px;">
+        <div class="header d-flex mb-0">
+            <div class="title">
+                الملفات
+            </div>
+            <div class="btns d-flex">
+                <div class="search">
+                    <input class="form-control" type="text" name="search" placeholder="البحث">
+                    <i class="fa fa-search  icon" id="search-icon" aria-hidden="true"></i>
+                </div>
+                <div class="d-flex flex-grow-1 gap-1 btns-group">
+                   
+                    <button type="button" class="btn btn-add" onclick="" id="openModal">
+                        <i class="fas fa-file-upload" style="margin-inline-end:5px;"></i>
+                        إضافة ملف
+                    </button>
+                
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="table-responsive company-table">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="t-header">
+                            <th>#</th>
+                            <th style="min-width: 150px;" scope="col">اسم الملف</th>
+                            <th class="text-center" scope="col">نوع الملف</th>
+                            <th class="text-center" scope="col">عرض و تحميل</th>
+
+                            <th style="min-width: 150px;" class="text-center" scope="col">الخيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>
+                                <label for="Name1">عقد الإيجار</label>
+                            </td>
+                            <td class="text-center">ملف عقد الإيجار</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>                              
+                                <label for="Name1">صورة البطاقة</label>
+                            </td>
+                            <td class="text-center">بطاقة</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>                            
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="content rental-date tenant-info-box">
+        <h4 class="d-flex justify-content-center">المستأجر الثانى</h4>
+        <h3>بيانات المستأجر</h3>
+        <div class="tenant-info-container">
+            <p><strong>الاسم:</strong> محمد </p>
+            <p><strong>البريد الالكتروني:</strong> mohamed@example.com</p>
+            <p><strong>رقم الجوال:</strong> 01234567890</p>
+            <p><strong>المحافظة:</strong> القاهرة</p>
+            <p><strong>المنطقة:</strong> مدينة نصر</p>
+            <p><strong>الولاية:</strong> ولاية الخرطوم</p>
+            <p><strong>الواتساب:</strong> 01234567890</p>
+            <p><strong>الجنسية:</strong> مصري</p>
+            <p><strong>الوظيفة:</strong> مهندس</p>
+            <p><strong>الرقم القومي:</strong> 12345678901234</p>
+            <p><strong>مكان العمل:</strong> شركة ABC</p>
+        </div>
+      <!-- الملفات -->
+       
+      <div class="companies rental-date-files mt-3" style="border-radius: 15px;">
+        <div class="header d-flex mb-0">
+            <div class="title">
+                الملفات
+            </div>
+            <div class="btns d-flex">
+                <div class="search">
+                    <input class="form-control" type="text" name="search" placeholder="البحث">
+                    <i class="fa fa-search  icon" id="search-icon" aria-hidden="true"></i>
+                </div>
+                <div class="d-flex flex-grow-1 gap-1 btns-group">
+                   
+                    <button type="button" class="btn btn-add" onclick="" id="openModal">
+                        <i class="fas fa-file-upload" style="margin-inline-end:5px;"></i>
+                        إضافة ملف
+                    </button>
+                
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="table-responsive company-table">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="t-header">
+                            <th>#</th>
+                            <th style="min-width: 150px;" scope="col">اسم الملف</th>
+                            <th class="text-center" scope="col">نوع الملف</th>
+                            <th class="text-center" scope="col">عرض و تحميل</th>
+
+                            <th style="min-width: 150px;" class="text-center" scope="col">الخيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>
+                                <label for="Name1">عقد الإيجار</label>
+                            </td>
+                            <td class="text-center">ملف عقد الإيجار</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>                              
+                                <label for="Name1">صورة البطاقة</label>
+                            </td>
+                            <td class="text-center">بطاقة</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>                            
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="content rental-date tenant-info-box">
+        <h4 class="d-flex justify-content-center">المستأجر الثانى</h4>
+        <h3>بيانات المستأجر</h3>
+        <div class="tenant-info-container">
+            <p><strong>الاسم:</strong> محمد </p>
+            <p><strong>البريد الالكتروني:</strong> mohamed@example.com</p>
+            <p><strong>رقم الجوال:</strong> 01234567890</p>
+            <p><strong>المحافظة:</strong> القاهرة</p>
+            <p><strong>المنطقة:</strong> مدينة نصر</p>
+            <p><strong>الولاية:</strong> ولاية الخرطوم</p>
+            <p><strong>الواتساب:</strong> 01234567890</p>
+            <p><strong>الجنسية:</strong> مصري</p>
+            <p><strong>الوظيفة:</strong> مهندس</p>
+            <p><strong>الرقم القومي:</strong> 12345678901234</p>
+            <p><strong>مكان العمل:</strong> شركة ABC</p>
+        </div>
+      <!-- الملفات -->
+       
+      <div class="companies rental-date-files mt-3" style="border-radius: 15px;">
+        <div class="header d-flex mb-0">
+            <div class="title">
+                الملفات
+            </div>
+            <div class="btns d-flex">
+                <div class="search">
+                    <input class="form-control" type="text" name="search" placeholder="البحث">
+                    <i class="fa fa-search  icon" id="search-icon" aria-hidden="true"></i>
+                </div>
+                <div class="d-flex flex-grow-1 gap-1 btns-group">
+                   
+                    <button type="button" class="btn btn-add" onclick="" id="openModal">
+                        <i class="fas fa-file-upload" style="margin-inline-end:5px;"></i>
+                        إضافة ملف
+                    </button>
+                
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="table-responsive company-table">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="t-header">
+                            <th>#</th>
+                            <th style="min-width: 150px;" scope="col">اسم الملف</th>
+                            <th class="text-center" scope="col">نوع الملف</th>
+                            <th class="text-center" scope="col">عرض و تحميل</th>
+
+                            <th style="min-width: 150px;" class="text-center" scope="col">الخيارات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>
+                                <label for="Name1">عقد الإيجار</label>
+                            </td>
+                            <td class="text-center">ملف عقد الإيجار</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td>                              
+                                <label for="Name1">صورة البطاقة</label>
+                            </td>
+                            <td class="text-center">بطاقة</td>
+                            <td class="text-center">
+                                <a href="" style="color:black;">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                </a>
+                            </td>                            
+                            <td class="text-center td-actions">
+                                <a href="./companies-details.html" class="icon">
+                                    <img src="./images/eye-outline.png" alt="">
+                                </a>
+                                <button class="icon">
+                                    <img src="./images/trash-can-outline.png" alt="" class="trash">
+                                </button>
+                                <button class="icon" data-bs-toggle="modal" data-bs-target="#addCompany">
+                                    <img src="./images/pencil-outline.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pagination-container">
+    <button class="pagination-btn prev">السابق</button>
+        <div class="inner-pages-container">
+        </div>
+    <button class="pagination-btn next">التالى</button>
+</div>  
+
+
+            </div>
+            <div id="myModal" class="standard-modal">
+                <div class="standard-modal-content">
+                <span class="standard-modal-close">&times;</span>
+                <h2>Modal Title</h2>
+                <p>This is the content of the pop-up modal.</p>
+                <p>This is the content of the pop-up modal.</p>
+                <p>This is the content of the pop-up modal.</p>
+                <p>This is the content of the pop-up modal.</p>
+                <p>This is the content of the pop-up modal.</p>
+                </div>
+            </div>
+            </div>
+    
+    
+    
+        <!-- Jquery -->
+        <script src="js/jquery-3.7.0.min.js"></script>
+        <!--  Bootstrap Bundle with Popper -->
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js">
+        </script>
+        <!-- font-awesome -->
+        <script src="js/all.min.js"></script>
+        <!-- select2 -->
+        <script src="js/select2.min.js"></script>
+        <!-- own js -->
+        <script src="js/custom.js"></script>
+        <script src="js/custom2.js"></script>
+        <script>
+            $(window).on('load', function () {
+                $(".main-loading").fadeOut().css("display", "none")
+            });
+        </script>
+    </body>
+    
+    </html>

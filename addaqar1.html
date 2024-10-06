@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>المركز الوطنى للاحصاء والمعلومات</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#FFB636">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#FFB636">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="images/NationalCenterStatistics.png" />
+
+
+    <!-- sweetalert -->
+    <link href="css/sweetalert2.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- select2 -->
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- English vaersion -->
+    
+</head>
+
+<body>
+
+
+    <div class="spinner-border text-primary loader" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <div class="d-flex flex-nowrap home loader-hidden">
+
+        <!-- menu -->
+        <aside id="sidebar" class="expand">
+            <!-- logo -->
+            <div class="px-2 mt-3 d-flex justify-content-between align-items-center">
+                <div class="sidebar-logo" id="logo">
+                    <img src="./images/NationalCenterStatisticsLogoList.png" class="img-fluid" alt="">
+                </div>
+                <button class="toggle-btn  d-flex p-1" type="button">
+                    <i class="fa-solid fa-bars align-self-center"></i>
+                </button>
+            </div>
+
+
+
+            <!-- menu list -->
+            <ul class="sidebar-nav">
+               
+
+                <li class="sidebar-item">
+                    <a href="./home.html" class="sidebar-link ">
+                        <i class="fa-solid fa-house icon"></i>
+
+                        <span class="">الرئيسية</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-users icon"></i>
+                        <span>العملاء </span>
+                    </a>
+                </li>
+                <li class="sidebar-item active">
+                    <a href="./companies.html" class="sidebar-link">
+                        <i class="fa-solid fa-building icon"></i>
+                        <span>العقارات</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./researcher.html" class="sidebar-link">
+
+                        <i class="fa-solid fa-calendar-days icon"></i>
+                        <span>المهام اليومية</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-gavel icon"></i>
+                        <span>قوانين</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-file-signature icon"></i>
+                        <span>نماذج الاتفاقيات</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-building-user icon"></i>
+                        <span> زيارات</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-screwdriver-wrench icon"></i>
+                        <span>صيانة وادارة</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-money-bill-transfer icon"></i>
+                        <span>استثمار</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+
+                        <i class="fa-solid fa-globe icon"></i>
+                        <span>الموقع</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+
+                    <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                    <span>سندات</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+
+                <i class="fa-solid fa-chart-simple icon"></i>
+                <span>تقارير</span>
+            </a>
+            </li>
+            <li class="sidebar-item">
+                <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#setting"
+                    aria-expanded="false" aria-controls="setting">
+                    <a class="sidebar-link " id="setting-icon">
+                        <i class="fa-solid fa-gear icon"></i>
+                        <span class="">الإعدادات</span>
+                    </a>
+                    <span class="drop-dowm-icon fa-solid fa-caret-down collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#setting" aria-expanded="false" aria-controls="setting">
+                    </span>
+                </div>
+                <ul id="setting" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="./settings-requesting.html" class="sidebar-link inactive">
+                            <i class="fa-solid fa-file-lines icon inactive"></i>
+                            <span>الطلبات</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="./settings-messages.html" class="sidebar-link inactive">
+                            <i class="fa-solid fa-envelope icon inactive"></i>
+                            <span>الرسائل</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="./settings-auth.html" class="sidebar-link inactive">
+
+                            <i class="fa-solid fa-address-card icon inactive"></i>
+                            <span>الصلاحيات</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="./settings-home.html" class="sidebar-link inactive">
+
+                            <i class="fa-solid fa-file-pen icon inactive"></i>
+                            <span>الصفحة الرئيسية</span>
+
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            </ul>
+        </aside>
+        <!-- end-menu -->
+
+        <!-- main content -->
+        <div class="main-content p-4 main card " style="flex: 1;">
+
+            <!-- header -->
+            <div class="header d-flex flex-wrap justify-content-between align-items-center">
+                <h4 class="title">
+                    العقارات
+                </h4>
+                <div class="user d-flex justify-content-between align-items-center">
+                    <div class="dropdown">
+                           <button type="button" class="btn lang" id="dropdownlang" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                           <span class="current-lang">عربى</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+               
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownlang">
+                            <li><a class="dropdown-item second-lang" href="#">En</a></li>
+                        </ul>  
+                    </div>
+                    <a href="./notification.html" class="notification  active">
+                        <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <div class="user-img">
+                        <img src="./images/avatar.PNG" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- end-header -->
+    <!-- tabs -->
+    <div class="tabs">
+        <ul class="nav nav-pills mb-3">
+            <li class="nav-item">
+                <a href="./addaqar.html" class="nav-link ms-0 d-flex" type="button">
+                    <i class="fa-solid fa-square-poll-vertical icon"></i>
+                    عقارات للايجار
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="./addaqar1.html" class="nav-link ms-0 active d-flex" type="button">
+                    <i class="fa-regular fa-map icon"></i>
+                    عقارات تمليك
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="./addaqar2.html" class="nav-link ms-0 d-flex" type="button">
+                    <i class="fa-solid fa-table icon"></i>
+                    عقارات للتطوير
+                </a>
+            </li>
+        </ul>
+    </div>
+            <!-- start content -->
+        
+            <div class="company-modal" tabindex="-1" aria-labelledby="add">
+                <div class="">
+                    <div class="modal-content">
+                        <div class="modal-header pb-0">
+                            <h5 class="modal-title" id="add">إضافة عقار</h5>
+                        </div>
+                        <form>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="رمز الشركة">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="اسم الشركة بالعربى">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="اسم الشركة بالإنجليزي">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="رمز القطاع">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text"
+                                            placeholder="النشاط الاقتصادي الرئيسي">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <select class="form-select add-company-select" style="width: 100%;">
+                                            <option selected value="0">النشاط الاقتصادي الرئيسي</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <input class="form-control input-modal" type="number" placeholder="رقم البلدية">
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <input class="form-control input-modal" type="number" placeholder="رقم تسجيل الشركة">
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <input class="form-control input-modal" type="number" placeholder="مدة المحاسبة">
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="الانتهاء مدة المحاسبة">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="number" placeholder="رقم الهاتف">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="number" placeholder="الهاتف الثابت">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="number" placeholder="فاكس">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="email" placeholder="الموقع الإلكتروني">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="العنوان">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="صندوق البريد">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="الرمز البريدي">
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <select class="form-select add-company-select" style="width: 100%;">
+                                            <option selected value="0">رقم المنطقة</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="المنطقة">
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <select class="form-select add-company-select" style="width: 100%;">
+                                            <option selected value="0">رقم الولاية</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="الولاية">
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <select class="form-select add-company-select" style="width: 100%;">
+                                            <option value="0">مقر إقامة المؤسسة</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 mb-2">
+                                        <input class="form-control input-modal" type="date" placeholder="تاريخ مزاولة العمل">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <select class="form-select add-company-select" style="width: 100%;">
+                                            <option value="0">قيمة المؤسسة</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="text" placeholder="النوع القانوني">
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <input class="form-control input-modal" type="email" placeholder="البريد الإلكتروني">
+                                    </div>
+                                    <div class="col-sm-6 mb-2 d-flex" style="gap: 8px;">
+                                        <input class="form-control input-modal" type="email" placeholder="البريد الإلكتروني">
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer pt-0" style="border-top: none;">
+                                <button type="button" class="btn btn-add " style="min-width: 90px">أضافة
+                                    <img src="./images/plus-circle-outline.png" alt="">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- end content -->
+
+        </div>
+    </div>
+
+
+        <!-- Jquery -->
+        <script src="js/jquery-3.7.0.min.js"></script>
+        <!--  Bootstrap Bundle with Popper -->
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    
+        <!-- sweetalert -->
+        <script src="js/sweetalert2@9.js"></script>
+        <!-- font-awesome -->
+        <script src="js/all.min.js"></script>
+        <!-- select2 -->
+        <script src="js/select2.min.js"></script>
+        <!-- own js -->
+        <script src="js/custom.js"></script>
+        <script>
+            $(window).on('load', function () {
+                $(".main-loading").fadeOut().css("display", "none")
+            });
+        </script>
+    </body>
+    
+    </html>

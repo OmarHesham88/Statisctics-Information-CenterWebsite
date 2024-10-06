@@ -1,0 +1,39 @@
+html{
+    direction: ltr;
+}
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 200px;
+    overflow-y: auto;
+    direction: ltr;
+}
+.select2 {
+    direction: ltr;
+}
+.select2-selection__arrow {
+    right: auto !important;
+    inset-inline-end: 0 !important;
+    left: auto !important;
+}
+.arrow a {
+    color: #00AF9D;
+    font-weight: 500;
+    transform: scale(-1);
+}
+.clipped-element-first , .clipped-element{
+    transform: scale(-1);
+}
+.form-switch .form-check-input {
+    margin-left: 0;
+}
+.form-switch {
+    padding-inline-start: 0;
+    flex-direction: row-reverse !important;
+    display: flex;
+    margin-inline-start: 10px;
+    column-gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+.form-switch  input{
+    cursor: pointer;
+}
